@@ -22,7 +22,7 @@
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=CharLemAznable_gentle-boot&metric=coverage)](https://sonarcloud.io/dashboard?id=CharLemAznable_gentle-boot)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=CharLemAznable_gentle-boot&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=CharLemAznable_gentle-boot)
 
-SpringBoot扩展.
+Some Spring Boot Plugins/Utils/Elves.
 
 ##### Maven Dependency
 
