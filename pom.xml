@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.github.charlemaznable</groupId>
+        <artifactId>complex-dependencies</artifactId>
+        <version>0.5.2-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>gentle-boot</artifactId>
+    <version>0.0.2-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>Gentle Boot</name>
+    <url>https://github.com/CharLemAznable/gentle-boot</url>
+    <description>Some Spring Boot Plugins/Utils/Elves.</description>
+
+    <scm>
+        <connection>scm:git:https://github.com/CharLemAznable/gentle-boot.git</connection>
+        <developerConnection>scm:git:https://github.com/CharLemAznable/gentle-boot.git</developerConnection>
+        <url>https://github.com/CharLemAznable/gentle-boot</url>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.charlemaznable</groupId>
+            <artifactId>logback-miner</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring-boot.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+            <version>${spring-boot.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
