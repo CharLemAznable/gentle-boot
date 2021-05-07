@@ -1,4 +1,4 @@
-package com.github.charlemaznable.gentle;
+package com.github.charlemaznable.gentle.spring.boot;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package com.github.charlemaznable.gentle;
+package com.github.charlemaznable.gentle.spring.boot;
 
 import com.github.charlemaznable.core.spring.ComplexBeanNameGenerator;
 import org.springframework.boot.SpringApplication;

@@ -1,4 +1,4 @@
-package com.github.charlemaznable.gentle;
+package com.github.charlemaznable.gentle.spring.boot;
 
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;

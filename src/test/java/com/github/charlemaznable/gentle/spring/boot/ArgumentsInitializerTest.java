@@ -1,4 +1,4 @@
-package com.github.charlemaznable.gentle;
+package com.github.charlemaznable.gentle.spring.boot;
 
 import com.github.charlemaznable.core.config.Arguments;
 import com.github.charlemaznable.core.net.common.Mapping;
