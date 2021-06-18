@@ -26,7 +26,13 @@ Some Spring Boot Plugins/Utils/Elves.
 
 ##### Maven Dependency
 
-待发布.
+```xml
+<dependency>
+  <groupId>com.github.charlemaznable</groupId>
+  <artifactId>gentle-boot</artifactId>
+  <version>0.0.2</version>
+</dependency>
+```
 
 ##### Maven Dependency SNAPSHOT
 
@@ -34,6 +40,6 @@ Some Spring Boot Plugins/Utils/Elves.
 <dependency>
   <groupId>com.github.charlemaznable</groupId>
   <artifactId>gentle-boot</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.0.3-SNAPSHOT</version>
 </dependency>
 ```
