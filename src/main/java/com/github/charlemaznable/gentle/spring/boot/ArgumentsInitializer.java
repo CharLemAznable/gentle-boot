@@ -8,7 +8,7 @@ import org.springframework.boot.SpringApplicationRunListener;
 import static com.github.charlemaznable.core.lang.Condition.checkNotNull;
 
 @SpringFactory(SpringApplicationRunListener.class)
-public class ArgumentsInitializer implements SpringApplicationRunListener {
+public final class ArgumentsInitializer implements SpringApplicationRunListener {
 
     public ArgumentsInitializer(SpringApplication application, String[] args) {
         checkNotNull(application);
