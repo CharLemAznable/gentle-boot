@@ -22,6 +22,7 @@ public class GentleBootInitializerNoIdTest {
 
     @BeforeAll
     public static void beforeAll() {
+        GentleBootConfigLoader.loadGentleBootConfig();
         MockDiamondServer.setUpMockServer();
         MockDiamondServer.setConfigInfo("Test", "config.test", "" +
                 "server.servlet.context-path=/test-arg\n" +

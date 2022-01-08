@@ -27,7 +27,7 @@ public final class GentleBootConfigLoader {
         return nullThen(loadConfig, GentleBootConfigLoader::defaultConfig).properties();
     }
 
-    private static void loadGentleBootConfig() {
+    static void loadGentleBootConfig() {
         loadConfig = findGentleBootConfig();
     }
 
