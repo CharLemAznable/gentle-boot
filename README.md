@@ -43,3 +43,18 @@ Some Spring Boot Plugins/Utils/Elves.
   <version>0.0.5-SNAPSHOT</version>
 </dependency>
 ```
+
+#### 读取命令行参数
+
+读取启动命令行参数, 使用```com.github.charlemaznable.core.config.Arguments```获取命令行参数.
+
+```java
+Arguments arguments = new Arguments();
+// ...
+```
+
+#### 自定义方式配置```application.properties```
+
+可使用ServiceLoader方式, 自定义```com.github.charlemaznable.gentle.spring.boot.GentleBootConfig```实现, 自行配置SpringBoot应用配置.
+
+默认可在命令行参数中添加```--BootGroup=xxx```和```--BootId=yyy```参数, 指定diamond group/dataId, 以使用Diamond配置SpringBoot应用配置.
