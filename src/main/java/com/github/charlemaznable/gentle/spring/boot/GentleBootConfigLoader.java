@@ -1,6 +1,5 @@
 package com.github.charlemaznable.gentle.spring.boot;
 
-import com.github.charlemaznable.core.config.Arguments;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import lombok.val;
@@ -14,9 +13,6 @@ import static com.github.charlemaznable.core.miner.MinerFactory.getMiner;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GentleBootConfigLoader {
 
-    private static final String BOOT_GROUP = "BootGroup";
-    private static final String BOOT_ID = "BootId";
-
     private static GentleBootConfig loadConfig;
 
     static {
@@ -24,7 +20,7 @@ public final class GentleBootConfigLoader {
     }
 
     public static Properties getConfigProperties() {
-        return nullThen(loadConfig, GentleBootConfigLoader::defaultConfig).properties();
+        return nullThen(loadConfig, () -> getMiner(GentleBootConfig.class)).properties();
     }
 
     static void loadGentleBootConfig() {
@@ -39,13 +35,5 @@ public final class GentleBootConfigLoader {
         if (configs.hasNext())
             throw new IllegalStateException("Multiple GentleBootConfig Defined");
         return result;
-    }
-
-    private static GentleBootConfig defaultConfig() {
-        val arguments = new Arguments();
-        if (arguments.exists(BOOT_GROUP) && arguments.exists(BOOT_ID)) {
-            return getMiner(GentleBootConfig.class);
-        }
-        return Properties::new;
     }
 }

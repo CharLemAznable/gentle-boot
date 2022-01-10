@@ -16,9 +16,8 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = TestApplication.class,
-        args = {"--spring.profiles.active=nogroup", "--BootId=config.test"},
         webEnvironment = DEFINED_PORT)
-public class GentleBootInitializerNoGroupTest {
+public class GentleBootInitializerNoArgTest {
 
     @BeforeAll
     public static void beforeAll() {
@@ -44,7 +43,7 @@ public class GentleBootInitializerNoGroupTest {
     }
 
     @OhClient
-    @Mapping("http://127.0.0.1:7512/test")
+    @Mapping("http://127.0.0.1:7514/test")
     public interface TestClient {
 
         String index();
