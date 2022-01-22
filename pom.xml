@@ -7,11 +7,11 @@
     <parent>
         <groupId>com.github.charlemaznable</groupId>
         <artifactId>char-dependencies</artifactId>
-        <version>0.0.5-SNAPSHOT</version>
+        <version>0.0.6-SNAPSHOT</version>
     </parent>
 
     <artifactId>gentle-boot</artifactId>
-    <version>0.0.5-SNAPSHOT</version>
+    <version>0.0.6-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Gentle Boot</name>
@@ -25,9 +25,9 @@
     </scm>
 
     <properties>
-        <complex-kits.version>0.12.5-SNAPSHOT</complex-kits.version>
-        <gentle-factory.version>0.0.5-SNAPSHOT</gentle-factory.version>
-        <logback-miner.version>0.1.5-SNAPSHOT</logback-miner.version>
+        <complex-kits.version>0.12.6-SNAPSHOT</complex-kits.version>
+        <gentle-factory.version>0.0.6-SNAPSHOT</gentle-factory.version>
+        <logback-miner.version>0.1.6-SNAPSHOT</logback-miner.version>
     </properties>
 
     <dependencies>
