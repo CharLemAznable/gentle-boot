@@ -1,7 +1,7 @@
 package com.github.charlemaznable.gentle.spring.boot;
 
-import com.github.charlemaznable.core.miner.DefaultEmptyValue;
-import com.github.charlemaznable.core.miner.MinerConfig;
+import com.github.charlemaznable.miner.DefaultEmptyValue;
+import com.github.charlemaznable.miner.MinerConfig;
 
 import java.util.Properties;
 

@@ -8,7 +8,7 @@ import java.util.Properties;
 import java.util.ServiceLoader;
 
 import static com.github.charlemaznable.core.lang.Condition.nullThen;
-import static com.github.charlemaznable.core.miner.MinerFactory.getMiner;
+import static com.github.charlemaznable.miner.MinerFactory.getMiner;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GentleBootConfigLoader {

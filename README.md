@@ -1,7 +1,6 @@
 ### gentle-boot
 
-[![Build Status](https://travis-ci.org/CharLemAznable/gentle-boot.svg?branch=main)](https://travis-ci.org/CharLemAznable/gentle-boot)
-[![codecov](https://codecov.io/gh/CharLemAznable/gentle-boot/branch/main/graph/badge.svg?token=voCoVkDE7F)](https://codecov.io/gh/CharLemAznable/gentle-boot)
+[![Build](https://github.com/CharLemAznable/gentle-boot/actions/workflows/build.yml/badge.svg)](https://github.com/CharLemAznable/gentle-boot/actions/workflows/build.yml)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.charlemaznable/gentle-boot/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.charlemaznable/gentle-boot/)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 ![GitHub code size](https://img.shields.io/github/languages/code-size/CharLemAznable/gentle-boot)

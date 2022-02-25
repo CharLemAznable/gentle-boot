@@ -24,17 +24,47 @@
         <url>https://github.com/CharLemAznable/gentle-boot</url>
     </scm>
 
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2/</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>sonatype</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <properties>
-        <complex-kits.version>0.12.6-SNAPSHOT</complex-kits.version>
+        <sonar.projectKey>CharLemAznable_gentle-boot</sonar.projectKey>
+
+        <char-elves.version>0.0.6-SNAPSHOT</char-elves.version>
+        <char-miner.version>0.0.6-SNAPSHOT</char-miner.version>
         <gentle-factory.version>0.0.6-SNAPSHOT</gentle-factory.version>
+
         <logback-miner.version>0.1.6-SNAPSHOT</logback-miner.version>
+        <char-httpclient.version>0.0.6-SNAPSHOT</char-httpclient.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.github.charlemaznable</groupId>
-            <artifactId>complex-kits</artifactId>
-            <version>${complex-kits.version}</version>
+            <artifactId>char-elves</artifactId>
+            <version>${char-elves.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.charlemaznable</groupId>
+            <artifactId>char-miner</artifactId>
+            <version>${char-miner.version}</version>
         </dependency>
         <dependency>
             <groupId>com.github.charlemaznable</groupId>
@@ -51,6 +81,22 @@
             <groupId>com.github.charlemaznable</groupId>
             <artifactId>logback-miner</artifactId>
             <version>${logback-miner.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.charlemaznable</groupId>
+            <artifactId>char-httpclient</artifactId>
+            <version>${char-httpclient.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-inline</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
