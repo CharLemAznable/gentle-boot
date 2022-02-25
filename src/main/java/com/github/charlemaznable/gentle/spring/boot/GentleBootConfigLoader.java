@@ -1,6 +1,5 @@
 package com.github.charlemaznable.gentle.spring.boot;
 
-import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import lombok.val;
 
@@ -9,8 +8,9 @@ import java.util.ServiceLoader;
 
 import static com.github.charlemaznable.core.lang.Condition.nullThen;
 import static com.github.charlemaznable.miner.MinerFactory.getMiner;
+import static lombok.AccessLevel.PRIVATE;
 
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor(access = PRIVATE)
 public final class GentleBootConfigLoader {
 
     private static GentleBootConfig loadConfig;
