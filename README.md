@@ -56,4 +56,8 @@ Arguments arguments = new Arguments();
 
 可使用ServiceLoader方式, 自定义```com.github.charlemaznable.gentle.spring.boot.GentleBootConfig```实现, 自行配置SpringBoot应用配置.
 
-默认可在命令行参数中添加```--BootGroup=xxx```和```--BootId=yyy```参数, 指定diamond group/dataId, 以使用Diamond配置SpringBoot应用配置.
+默认可在命令行参数中添加```--BootGroup=xxx```和```--BootId=yyy```参数, 指定配置服务坐标, 以使用Apollo/Diamond配置SpringBoot应用.
+
+默认读取Diamond配置坐标: ```group:xxx dataId:yyy```.
+
+类路径添加```configservice.env.props```文件, 向其中添加配置```ConfigService=apollo```, 可读取Apollo配置坐标: ```namespace:xxx propertyName:yyy```.

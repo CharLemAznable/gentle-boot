@@ -6,8 +6,8 @@ import lombok.val;
 import java.util.Properties;
 import java.util.ServiceLoader;
 
+import static com.github.charlemaznable.configservice.ConfigFactory.getConfig;
 import static com.github.charlemaznable.core.lang.Condition.nullThen;
-import static com.github.charlemaznable.miner.MinerFactory.getMiner;
 import static lombok.AccessLevel.PRIVATE;
 
 @NoArgsConstructor(access = PRIVATE)
@@ -20,7 +20,7 @@ public final class GentleBootConfigLoader {
     }
 
     public static Properties getConfigProperties() {
-        return nullThen(loadConfig, () -> getMiner(GentleBootConfig.class)).properties();
+        return nullThen(loadConfig, () -> getConfig(GentleBootConfig.class)).properties();
     }
 
     static void loadGentleBootConfig() {

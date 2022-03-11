@@ -1,14 +1,17 @@
 package com.github.charlemaznable.gentle.spring.boot;
 
-import com.github.charlemaznable.miner.DefaultEmptyValue;
-import com.github.charlemaznable.miner.MinerConfig;
+import com.github.charlemaznable.configservice.annotation.DefaultEmptyValue;
+import com.github.charlemaznable.configservice.apollo.ApolloConfig;
+import com.github.charlemaznable.configservice.diamond.DiamondConfig;
 
 import java.util.Properties;
 
-@MinerConfig(group = "${BootGroup}")
+@ApolloConfig(namespace = "${BootGroup}")
+@DiamondConfig(group = "${BootGroup}")
 public interface GentleBootConfig {
 
     @DefaultEmptyValue
-    @MinerConfig("${BootId}")
+    @ApolloConfig("${BootId}")
+    @DiamondConfig("${BootId}")
     Properties properties();
 }
