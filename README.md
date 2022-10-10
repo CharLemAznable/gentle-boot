@@ -29,7 +29,7 @@ Some Spring Boot Plugins/Utils/Elves.
 <dependency>
   <groupId>com.github.charlemaznable</groupId>
   <artifactId>gentle-boot</artifactId>
-  <version>0.1.1</version>
+  <version>0.1.2</version>
 </dependency>
 ```
 
@@ -39,7 +39,7 @@ Some Spring Boot Plugins/Utils/Elves.
 <dependency>
   <groupId>com.github.charlemaznable</groupId>
   <artifactId>gentle-boot</artifactId>
-  <version>0.1.2-SNAPSHOT</version>
+  <version>0.1.3-SNAPSHOT</version>
 </dependency>
 ```
 
