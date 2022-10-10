@@ -20,7 +20,7 @@ public final class GentleBootConfigLoader {
     }
 
     public static Properties getConfigProperties() {
-        return nullThen(loadConfig, () -> getConfig(GentleBootConfig.class)).properties();
+        return nullThen(loadConfig, GentleBootConfigLoader::defaultGentleBootConfig).properties();
     }
 
     static void loadGentleBootConfig() {
@@ -35,5 +35,13 @@ public final class GentleBootConfigLoader {
         if (configs.hasNext())
             throw new IllegalStateException("Multiple GentleBootConfig Defined");
         return result;
+    }
+
+    private static GentleBootConfig defaultGentleBootConfig() {
+        try {
+            return getConfig(GentleBootConfig.class);
+        } catch (Exception e) {
+            return Properties::new;
+        }
     }
 }
