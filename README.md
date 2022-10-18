@@ -58,6 +58,8 @@ Arguments arguments = new Arguments();
 
 默认可在命令行参数中添加```--BootGroup=xxx```和```--BootId=yyy```参数, 指定配置服务坐标, 以使用Apollo/Diamond配置SpringBoot应用.
 
-默认读取Diamond配置坐标: ```group:xxx dataId:yyy```.
+读取Apollo配置坐标: ```namespace:xxx propertyName:yyy```, 读取Diamond配置坐标: ```group:xxx dataId:yyy```.
 
-类路径添加```configservice.env.props```文件, 向其中添加配置```ConfigService=apollo```, 可读取Apollo配置坐标: ```namespace:xxx propertyName:yyy```.
+依据添加的apollo-client/diamond-client依赖决定使用Apollo/Diamond配置.
+
+如果同时依赖apollo-client&diamond-client, 则根据类路径中添加的```configservice.env.props```文件中的配置```ConfigService=apollo|diamond```决定使用Apollo/Diamond配置.
