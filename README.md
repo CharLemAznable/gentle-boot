@@ -62,4 +62,8 @@ Arguments arguments = new Arguments();
 
 依据添加的apollo-client/diamond-client依赖决定使用Apollo/Diamond配置.
 
-如果同时依赖apollo-client&diamond-client, 则根据类路径中添加的```configservice.env.props```文件中的配置```ConfigService=apollo|diamond```决定使用Apollo/Diamond配置.
+如果同时依赖apollo-client&diamond-client, 则根据
+* 类路径中添加的```configservice.env.props```文件中的配置```ConfigService=apollo|diamond```
+* 命令行参数中添加的```--ConfigService=apollo|diamond```
+
+(按优先级顺序从低到高)决定使用Apollo/Diamond配置.
