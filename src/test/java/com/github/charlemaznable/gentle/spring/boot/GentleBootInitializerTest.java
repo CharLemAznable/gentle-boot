@@ -23,15 +23,16 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
         webEnvironment = DEFINED_PORT)
 public class GentleBootInitializerTest {
 
-    private TestClient testClient = getClient(TestClient.class);
+    private final TestClient testClient = getClient(TestClient.class);
 
     @BeforeAll
     public static void beforeAll() {
         GentleBootConfigLoader.loadGentleBootConfig();
         MockDiamondServer.setUpMockServer();
-        MockDiamondServer.setConfigInfo("Test", "config.test", "" +
-                "server.servlet.context-path=/test-arg\n" +
-                "server.port=7515\n");
+        MockDiamondServer.setConfigInfo("Test", "config.test", """
+                server.servlet.context-path=/test-arg
+                server.port=7515
+                """);
     }
 
     @AfterAll
@@ -46,9 +47,10 @@ public class GentleBootInitializerTest {
         assertEquals("Test", arguments.getStr("BootGroup"));
         assertEquals("config.test", arguments.getStr("BootId"));
 
-        assertEquals("If you wish to be the king of the jungle,\n" +
-                "it's not enough to act like a king.\n" +
-                "You must be the king.", testClient.index());
+        assertEquals("""
+                If you wish to be the king of the jungle,
+                it's not enough to act like a king.
+                You must be the king.""", testClient.index());
     }
 
     @OhClient

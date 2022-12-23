@@ -5,6 +5,7 @@ import com.google.common.collect.Lists;
 import lombok.val;
 import org.junit.jupiter.api.Test;
 
+import java.util.Collections;
 import java.util.Properties;
 import java.util.ServiceLoader;
 
@@ -17,6 +18,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.when;
 
+@SuppressWarnings("rawtypes")
 public class GentleBootConfigLoaderTest {
 
     @Test
@@ -56,7 +58,7 @@ public class GentleBootConfigLoaderTest {
 
         try (val mockServiceLoader = mockStatic(ServiceLoader.class)) {
             ServiceLoader mockConfigs = mock(ServiceLoader.class);
-            when(mockConfigs.iterator()).thenReturn(Lists.newArrayList().iterator());
+            when(mockConfigs.iterator()).thenReturn(Collections.emptyIterator());
             mockServiceLoader.when(() -> ServiceLoader.load(GentleBootConfig.class)).thenReturn(mockConfigs);
 
             GentleBootConfigLoader.loadGentleBootConfig();
