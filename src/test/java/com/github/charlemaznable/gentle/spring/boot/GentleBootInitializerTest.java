@@ -23,7 +23,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
         webEnvironment = DEFINED_PORT)
 public class GentleBootInitializerTest {
 
-    private TestClient testClient = getClient(TestClient.class);
+    private final TestClient testClient = getClient(TestClient.class);
 
     @BeforeAll
     public static void beforeAll() {
