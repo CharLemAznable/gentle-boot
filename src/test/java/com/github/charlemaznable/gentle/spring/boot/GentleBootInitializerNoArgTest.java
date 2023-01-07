@@ -5,16 +5,13 @@ import com.github.charlemaznable.httpclient.ohclient.OhClient;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.n3r.diamond.client.impl.MockDiamondServer;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static com.github.charlemaznable.httpclient.ohclient.OhFactory.getClient;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.DEFINED_PORT;
 
-@ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = TestApplication.class,
         webEnvironment = DEFINED_PORT)
 public class GentleBootInitializerNoArgTest {
