@@ -3,12 +3,14 @@ package com.github.charlemaznable.gentle.spring.boot;
 import com.github.charlemaznable.configservice.ConfigFactory;
 import com.google.common.collect.Lists;
 import lombok.val;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.Collections;
 import java.util.Properties;
 import java.util.ServiceLoader;
 
+import static com.github.charlemaznable.configservice.ConfigFactory.getConfig;
 import static com.github.charlemaznable.core.lang.Empty.isEmpty;
 import static org.joor.Reflect.onClass;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -20,6 +22,11 @@ import static org.mockito.Mockito.when;
 
 @SuppressWarnings("rawtypes")
 public class GentleBootConfigLoaderTest {
+
+    @BeforeAll
+    public static void beforeAll() {
+        assertNotNull(getConfig(GentleBootConfig.class));
+    }
 
     @Test
     public void testSingleConfig() {
